@@ -1,0 +1,724 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	font-family: "微软雅黑";
+}
+body{
+	overflow: hidden;
+	position: relative;
+}
+body>div{
+	overflow: hidden;
+}
+#index{
+	width: 100%;
+	background-image: url(../img/i_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	opacity: 1;
+	z-index: 20;
+	transition: all 1s;
+}
+#music{
+	display: none;
+}
+.music_btnoff{
+	width: 8.59375%;
+	padding-bottom: 8.59375%;
+	background-color: transparent;
+	background-image: url(../img/music_btn.png);
+	background-position-y: 0;
+	background-size: cover;
+	position: absolute;
+	top: 2.3%;
+	right: 4%;
+	z-index: 90;
+	transition: opacity 1s linear;
+}
+.music_btnon{
+	display: none;
+	width: 8.59375%;
+	padding-bottom: 8.59375%;
+	background-color: transparent;
+	background-image: url(../img/music_btn.png);
+	background-position-y: -100%;
+	background-size: cover;
+	position: absolute;
+	top: 2.3%;
+	right: 4%;
+	z-index: 90;
+}
+#t_time{
+	position: absolute;
+	top: 3.84%;
+	left: 4.6875%;
+	color: white;
+	font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+	z-index: 90;
+	opacity: 0;
+	transition: all 2s;
+}
+#an_head{
+	width: 42.5%;
+	position: absolute;
+	top: 11.3%;
+	left: 29%;
+}
+#i_txt{
+	width: 74.5%;
+	position: absolute;
+	top: 55%;
+	left: 13.28%;
+}
+#i_start{
+	width: 75.78%;
+	position: absolute;
+	top: 62.44%;
+	left: 12.5%;
+}
+#i_foot{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+/*=============================================		Loading		=====================================================*/
+#loading{
+	width: 100%;
+	background-image: url(../img/loading_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	opacity: 0;
+	transition: all 1s;
+}
+#loading img,#page1 img{
+	display: none;
+}
+#loading .loading_left{
+	display: block;
+	width: 47%;
+	position: absolute;
+	top: 17.3%;
+	left: 0;
+}
+#loading .loading_right{
+	display: block;
+	width: 42.8%;
+	position: absolute;
+	top: 18.25%;
+	right: 0;
+}
+#loading .loading_mid{
+	display: block;
+	width: 57.34%;
+	position: absolute;
+	top: 22.1%;
+	left: 20.31%;
+}
+#loading .loading_img{
+	display: block;
+	width: 38%;
+	position: absolute;
+	top: 80.6%;
+	left: 34%;
+}
+#rond{
+	width: 30%;
+	height: 0;
+	padding-bottom: 30%;;
+}
+.rond{
+	position: absolute;
+	top: 62.44%;
+	opacity: 0;
+	transition: all 1s;
+}
+#loading .loading_txt{
+	display: block;
+	/*width: 38%;*/
+	position: absolute;
+	top: 61%;
+	left: 35%;
+	opacity: 1;
+}
+#loading_div{
+	width: 100%;
+	position: absolute;
+	top: 66.6%;
+	/*left: 47%;*/
+	font-family: "lucida console";
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+/*=======================================	题目1	===========================================================*/
+#page1{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/page1_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	opacity: 0;
+	z-index: 15;
+	transition: all 1s;
+}
+#page1 .page1_head{
+	display: block;
+	width: 56.4%;
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+}
+#page1 .page1_num{
+	display: block;
+	width: 23.28%;
+	position: absolute;
+	top: 18.25%;
+	left: 38.28%;
+}
+#page1 .page1_test{
+	display: block;
+	width: 37.2%;
+	position: absolute;
+	top: 36.5%;
+	left: 31.25%;
+}
+#page1 .page1_1_5{
+	display: block;
+	width: 5%;
+	position: absolute;
+	top: 10%;
+	right: 6.25%;
+}
+.box{
+	position: absolute;
+	top: 65%;
+	left: 40%;
+    color: white;
+    font-size: 20px;
+    line-height: 170%;
+}
+input[type="radio"]{
+	margin-right: 15px;
+	transform: scale(1.6);
+}
+/*=======================================	题目2	===========================================================*/
+#page2{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/page2_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 14;
+	transition: all 1s;
+}
+#page2 .page2_head{
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	/*left: 25%;*/
+}
+#page2 .page2_num{
+	display: block;
+	width: 23.28%;
+	position: absolute;
+	top: 18.25%;
+	left: 38.28%;
+}
+#page2 .page2_test{
+	display: block;
+	width: 37.2%;
+	position: absolute;
+	top: 36.5%;
+	left: 18.25%;
+}
+#page2 .page2_2_5{
+	display: block;
+	width: 5%;
+	position: absolute;
+	top: 10%;
+	right: 6.25%;
+}
+#page2 .page2_img{
+	display: block;
+	width: 47.5%;
+	position: absolute;
+	top: 30%;
+	right: 0;
+}
+/*=======================================	题目3	===========================================================*/
+#page3{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/page3_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 13;
+	transition: all 1s;
+}
+#page3 .page3_head{
+	display: block;
+	width: 45.3%;
+	position: absolute;
+	bottom: 0;
+	/*left: 25%;*/
+}
+#page3 .page3_num{
+	display: block;
+	width: 23.28%;
+	position: absolute;
+	top: 18.25%;
+	left: 38.28%;
+}
+#page3 .page3_test{
+	display: block;
+	width: 77.34%;
+	position: absolute;
+	top: 36.5%;
+	left: 12.25%;
+}
+#page3 .page3_3_5{
+	display: block;
+	width: 5%;
+	position: absolute;
+	top: 10%;
+	right: 6.25%;
+}
+/*=======================================	题目4	===========================================================*/
+#page4{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/page4_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 12;
+	transition: all 1s;
+}
+#page4 .page4_head{
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	/*left: 25%;*/
+}
+#page4 .page4_num{
+	display: block;
+	width: 23.28%;
+	position: absolute;
+	top: 18.25%;
+	left: 38.28%;
+}
+#page4 .page4_test{
+	display: block;
+	width: 37.2%;
+	position: absolute;
+	top: 36.5%;
+	left: 18.25%;
+}
+#page4 .page4_4_5{
+	display: block;
+	width: 5%;
+	position: absolute;
+	top: 10%;
+	right: 6.25%;
+}
+#page4 .page4_img{
+	display: block;
+	width: 47.5%;
+	position: absolute;
+	top: 30%;
+	right: 0;
+}
+/*=======================================	题目5	===========================================================*/
+#page5{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/page4_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 11;
+	transition: all 1s;
+}
+#page5 .page5_head{
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	/*left: 25%;*/
+}
+#page5 .page5_num{
+	display: block;
+	width: 23.28%;
+	position: absolute;
+	top: 18.25%;
+	left: 38.28%;
+}
+#page5 .page5_test{
+	display: block;
+	width: 37.2%;
+	position: absolute;
+	top: 36.5%;
+	left: 14.25%;
+}
+#page5 .page5_5_5{
+	display: block;
+	width: 5%;
+	position: absolute;
+	top: 10%;
+	right: 6.25%;
+}
+#page5 .page5_img{
+	display: block;
+	width: 47.5%;
+	position: absolute;
+	top: 30%;
+	right: 0;
+}
+/*=======================================	victory	===========================================================*/
+#victory{
+	/*display: none;*/
+	width: 100%;
+	background-image: url(../img/vic_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 10;
+	transition: all 1s;
+}
+#victory .vic_head{
+	display: block;
+	width: 90%;
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+}
+#victory .vic_num{
+	display: block;
+	width: 50%;
+	position: absolute;
+	top: 18.25%;
+	left: 25%;
+}
+#victory .vic_btn{
+	width: 56%;
+	position: absolute;
+	top: 56%;
+	left: 23.5%;
+}
+/*=======================================	抽奖	===========================================================*/
+#cj{
+	width: 100%;
+	background-image: url(../img/cj_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 9;
+	transition: all 1s;
+}
+#cj_box{
+	width: 85.3%;
+	position: absolute;
+	top: 6.25%;
+	left: 7.5%;
+}
+#cj_img{
+	width: 100%;
+	background-image: url(../img/cj_img.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 5s ease-out;
+}
+#cj_btn{
+	width: 35.35%;
+	position: absolute;
+	top: 25.5%;
+	left: 32.4%;
+}
+#cj_txtbox{
+	/*width: 85%;*/
+	width: 75%;
+	padding: 5%;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid whitesmoke;
+	border-radius: 23px;
+	position: absolute;
+	top: 61%;
+	left: 7.2%;
+	overflow: hidden;
+}
+#cj_txt{
+	width: 88%;
+	position: absolute;
+	transition: all 1s;
+}
+/*=======================================	一等奖	===========================================================*/
+#cj_1{
+	width: 100%;
+	background-image: url(../img/cj_1_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 8;
+	transition: all 1s;
+}
+#cj_1 .cj_1_head{
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#cj_1 .cj_1_num{
+	display: block;
+	width: 50%;
+	position: absolute;
+	top: 14.25%;
+	left: 25%;
+}
+#cj_1 .cj_1_btn{
+	width: 19%;
+	position: absolute;
+	top: 82.6%;
+	left: 41.25%;
+}
+#cj_1 .cj_1_txt{
+	width: 56.4%;
+	position: absolute;
+	top: 73.68%;
+	left: 21.4%;
+}
+.name{
+    width: 31.34%;
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    transform: scale(1.5);
+    box-shadow: 2px 2px 0 black;
+}
+.tel{
+    width: 31.34%;
+    position: absolute;
+    top: 52%;
+    left: 45%;
+    transform: scale(1.5);
+    box-shadow: 2px 2px 0 black;
+}
+.ad{
+    width: 31.34%;
+    position: absolute;
+    top: 61%;
+    left: 45%;
+    transform: scale(1.5);
+    box-shadow: 2px 2px 0 black;
+    resize: none;
+}
+/*=======================================	一等奖 	  奖品     	===========================================================*/
+#ok_1{
+	width: 100%;
+	background-image: url(../img/bg_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 7;
+	transition: all 1s;
+}
+#ok_2{
+	width: 100%;
+	background-image: url(../img/bg_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 7;
+	transition: all 1s;
+}
+#ok_1 .ok_1_txt{
+	width: 60%;
+	position: absolute;
+	top: 11.5%;
+	left: 20%;
+}
+#ok_2 .ok_2_txt{
+	width: 67%;
+	position: absolute;
+	top: 11.5%;
+	left: 17%;
+}
+.i_foot{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+/*=======================================	二等奖 	  奖品     	===========================================================*/
+#cj_2{
+	width: 100%;
+	background-image: url(../img/bg_3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	transition: all 1s;
+}
+#cj_2 .cj_2_txt{
+	width: 68.28%;
+	position: absolute;
+	top: 11.5%;
+	left: 17%;
+}
+#cj_2 .cj_2_img{
+	display: block;
+	width: 45.625%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+}
+/*=======================================	三等奖 	  奖品     	===========================================================*/
+#cj_3{
+	width: 100%;
+	background-image: url(../img/bg_3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	transition: all 1s;
+}
+#cj_3 .cj_3_txt{
+	width: 68.125%;
+	position: absolute;
+	top: 11.5%;
+	left: 16%;
+}
+#cj_3 .cj_3_img{
+	display: block;
+	width: 45.625%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+}
+.fx{
+	z-index: 100;
+	width: 85.3125%;
+	padding-bottom: 128%;
+	position: absolute;
+	top: 3%;
+	left: 7%;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-image: url(../img/fx.png);
+	background-repeat: no-repeat;
+    background-size: 80%;
+    background-color: rgba(10,0,40,0.85);
+    background-position: 80% 10%;
+}
+/*=======================================	谢谢参与 	  奖品     	===========================================================*/
+#cj_0{
+	width: 100%;
+	background-image: url(../img/bg_3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	transition: all 1s;
+}
+#cj_0 .cj_0_txt{
+	width: 68.125%;
+	position: absolute;
+	top: 11.5%;
+	left: 16%;
+}
+#cj_0 .cj_0_img{
+	display: block;
+	width: 45.625%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+}
+/*=======================================	超时     	===========================================================*/
+#tmo{
+	width: 100%;
+	background-image: url(../img/bg_2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	transition: all 1s;
+}
+#tmo .tmo_txt{
+	width: 68.125%;
+	position: absolute;
+	top: 11.5%;
+	left: 16%;
+}
+/*=======================================	不及格     	===========================================================*/
+#gmo{
+	width: 100%;
+	background-image: url(../img/bg_2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	transition: all 1s;
+}
+#gmo .gmo_txt{
+	width: 68.125%;
+	position: absolute;
+	top: 11.5%;
+	left: 16%;
+}

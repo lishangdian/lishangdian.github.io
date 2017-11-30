@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>wordgames</title>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="nav">根据文字的颜色</div>
+		<div class="nav">选择正确的文字</div>
+		<button id="sta">开始游戏</button>
+		<div id="txt">红</div>
+		<span id="over"></span><br />
+		<button class="btn">红</button>
+		<button class="btn">绿</button>
+		<button class="btn">蓝</button>
+		<button class="btn">紫</button>
+		<button class="btn">橙</button><br /><br />
+		时间: <span id="time">30</span>&nbsp;&nbsp;&nbsp;
+		得分: <span id="score">0</span>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
