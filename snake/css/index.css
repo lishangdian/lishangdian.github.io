@@ -1,0 +1,157 @@
+@keyframes score {
+	0% {
+		opacity: 0;
+		top: 50%;
+	}
+	25% {
+		opacity: 1;
+		top: 37.5%;
+	}
+	50% {
+		opacity: 1;
+		top: 25%;
+	}
+	75% {
+		opacity: 1;
+		top: 12.5%;
+	}
+	100% {
+		opacity: 0;
+		top: 0%;
+	}
+}
+
+html,
+body,
+div,
+span {
+	margin: 0;
+	padding: 0;
+	font: normal normal normal 16px "微软雅黑";
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: yellowgreen url(../img/bg.png) 0 0 repeat;
+	overflow: hidden;
+}
+
+button {
+	outline: none;
+}
+
+
+/*
+ * snake模型模块
+ */
+
+#snake div {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	width: 15px;
+	height: 15px;
+	background: url(../img/h.png) 0 0px repeat;
+}
+
+#snake #sHeader {
+	top: 0;
+	left: 30px;
+	background: url(../img/head.png) 0px -30px no-repeat;
+	z-index: 1;
+}
+
+#snake #sFooter {
+	top: 0;
+	left: 0;
+	background: url(../img/tail1.png) 0 0px no-repeat;
+}
+
+
+/*
+ * 开始按钮
+ */
+
+#gameStart {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding-bottom: 200px;
+	width: 200px;
+	height: 0px;
+	border-radius: 100%;
+	box-shadow: 0 0 3px cyan;
+	z-index: 2;
+}
+
+#gameStart p {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -1em;
+	width: 100%;
+	height: 4em;
+	line-height: 1em;
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 2em;
+}
+
+
+/*
+ * food模型模块
+ */
+
+#food {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: url(../img/f1.png) 0 0 no-repeat;
+}
+
+
+/*记分板*/
+
+#scoreMod {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 200px;
+	color: #8C96B5;
+	text-shadow: 0 0 5px #B4BBCF;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+#scoreMod div {
+	float: left;
+	width: 50%;
+	line-height: 30px;
+	text-align: center;
+}
+
+#score,
+#scoreHighest {
+	position: relative;
+	line-height: 60px;
+	font-size: 3em;
+}
+
+#scoreMod span {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	font-size: 25px;
+	color: gold;
+	text-shadow: 0 0 3px yellow;
+	font-weight: bold;
+	animation: score 1s ease-out;
+	opacity: 0;
+}
